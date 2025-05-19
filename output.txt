@@ -1,0 +1,5 @@
+Rectangle = 1
+Circle = 1
+Triangle = 1
+Noise = 0
+Total Area = 99.5398
