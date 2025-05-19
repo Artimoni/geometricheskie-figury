@@ -1,1 +1,2 @@
-# geometricheskie-figury
+* Без реализации распознавателя фигур
+#figury
