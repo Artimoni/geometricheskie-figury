@@ -1,5 +1,8 @@
-Rectangle = 1
-Circle = 1
-Triangle = 1
+Rectangle = 3
+Circle = 4
+Triangle = 3
+Polygon = 2
 Noise = 0
-Total Area = 99.5398
+Total Area = 3.31434
+Circle Area Total = 137.445
+Shape Classes Count = 4
