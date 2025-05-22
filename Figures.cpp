@@ -7,13 +7,13 @@ const double PI = 3.141592653589793;
 
 static double dist(const Point& p1, const Point& p2) {
     return sqrt((p1.x - p2.x) * (p1.x - p2.x) + (p1.y - p2.y) * (p1.y - p2.y));
-} //расстояние между двумя точками
+} //СЂР°СЃСЃС‚РѕСЏРЅРёРµ РјРµР¶РґСѓ РґРІСѓРјСЏ С‚РѕС‡РєР°РјРё
 
 Circle::Circle(Point c, double r) : center(c), radius(r) {}
 
 double Circle::calculateArea() const {
     return PI * radius * radius;
-} //площадь круга
+} //РїР»РѕС‰Р°РґСЊ РєСЂСѓРіР°
 
 std::string Circle::getType() const {
     return "Circle";
@@ -25,7 +25,7 @@ double Triangle::calculateArea() const {
     double ab = dist(a, b), bc = dist(b, c), ca = dist(c, a);
     double s = (ab + bc + ca) / 2;
     return sqrt(s * (s - ab) * (s - bc) * (s - ca));
-} //формула Герона - треугольник
+} //С„РѕСЂРјСѓР»Р° Р“РµСЂРѕРЅР° - С‚СЂРµСѓРіРѕР»СЊРЅРёРє
 
 std::string Triangle::getType() const {
     return "Triangle";
@@ -35,7 +35,7 @@ Rectangle::Rectangle(Point a, Point b, Point c, Point d) : a(a), b(b), c(c), d(d
 
 double Rectangle::calculateArea() const {
     return dist(a, b) * dist(b, c);
-} //перемножаем стороны
+} //РїРµСЂРµРјРЅРѕР¶Р°РµРј СЃС‚РѕСЂРѕРЅС‹
 
 std::string Rectangle::getType() const {
     return "Rectangle";
@@ -48,7 +48,7 @@ Polygon::Polygon(const std::string& filename) {
         vertices.push_back(Point(x, y));
     }
     in.close();
-} //чтение точек из файла
+} //С‡С‚РµРЅРёРµ С‚РѕС‡РµРє РёР· С„Р°Р№Р»Р°
 
 double Polygon::calculateArea() const {
     double area = 0.0;
@@ -58,7 +58,7 @@ double Polygon::calculateArea() const {
         area += (p1.x * p2.y - p2.x * p1.y);
     }
     return std::abs(area) / 2.0;
-} //формула площади многоугольника
+} //С„РѕСЂРјСѓР»Р° РїР»РѕС‰Р°РґРё РјРЅРѕРіРѕСѓРіРѕР»СЊРЅРёРєР°
 
 std::string Polygon::getType() const {
     return "Polygon";
@@ -66,4 +66,4 @@ std::string Polygon::getType() const {
 
 bool Polygon::isScribble() const {
     return vertices.size() < 3;
-} //меньше 3 точек — не подходит
+} //РјРµРЅСЊС€Рµ 3 С‚РѕС‡РµРє вЂ” РЅРµ РїРѕРґС…РѕРґРёС‚
